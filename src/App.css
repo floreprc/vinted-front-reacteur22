@@ -26,6 +26,9 @@ nav {
 nav img {
   height: 35px;
 }
+nav div {
+  display: flex;
+}
 
 nav .button-nav button {
   background-color: white;
@@ -175,4 +178,75 @@ nav .button-nav button:hover {
   padding: 5px 0;
   border-radius: 5px;
   margin: 20px 0;
+}
+
+/* Signup */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.signup-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form input {
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid #09adb6;
+}
+
+form p {
+  font-size: 14px;
+  color: grey;
+}
+
+/* form .submit {
+  background-color: #09adb6;
+  border: 1px solid #09adb6;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+form .submit:hover {
+  background-color: white;
+  color: #09adb6;
+  border: 1px solid #09adb6;
+} */
+
+form .submit {
+  background-color: #09adb6;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #09adb6;
+  padding: 5px 10px;
+  margin: 0 10px;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+form .submit:hover {
+  background-color: white;
+  color: #09adb6;
+}
+
+form .newsletter {
+  margin: 5px auto;
 }
