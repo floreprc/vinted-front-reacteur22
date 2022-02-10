@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
+import { Link } from "react-router-dom";
 import logo from "./assets/img/vinted_logo.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +12,10 @@ function App() {
   return (
     <Router>
       <nav className="wrapped">
-        <img src={logo} alt="logo vinted" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo vinted" />
+        </Link>
+
         <div className="button-nav">
           {" "}
           <button>S'inscrire</button>

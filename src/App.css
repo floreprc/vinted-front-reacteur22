@@ -1,3 +1,4 @@
+*,
 body {
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -33,12 +34,31 @@ nav .button-nav button {
   border: 1px solid #09adb6;
   padding: 5px 10px;
   margin: 0 10px;
-  font-family: "IBM Plex Sans", sans-serif;
 }
 
 nav .button-nav button:hover {
   background-color: #09adb6;
   color: white;
+}
+
+/* Loading */
+.loader {
+  border: 14px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #09adb6; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 100px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Home */
@@ -58,6 +78,7 @@ nav .button-nav button:hover {
   display: flex;
   gap: 15px;
   padding: 10px 30px;
+  flex-wrap: wrap;
 }
 
 .item-box {
@@ -65,11 +86,13 @@ nav .button-nav button:hover {
   width: 200px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .item-box img {
-  height: 80%;
+  height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 
 .profile {

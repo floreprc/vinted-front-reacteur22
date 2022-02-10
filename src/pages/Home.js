@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -25,7 +26,7 @@ const Home = () => {
         <img src={homePicture} alt="Thrift shop" />
       </div>
       {isLoading ? (
-        <div>chargement</div>
+        <Loading />
       ) : (
         <div className="caroussel wrapped">
           {data.offers.map((elem, index) => {

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../components/Loading";
 
 const Offer = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,20 +11,19 @@ const Offer = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://vinted-reacteur22.herokuapp.com/offers"
+        `https://vinted-reacteur22.herokuapp.com/offer?id=${id}`
       );
-      const itemFound = response.data.offers.find((elem) => elem._id === id);
-      setItem(itemFound);
+      setItem(response.data);
       setIsLoading(false);
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   console.log(item);
   return (
     <div>
       {isLoading ? (
-        <div>Loading</div>
+        <Loading />
       ) : (
         <div className="background-item">
           <div className="img-item">
