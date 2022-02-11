@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Login = ({ setUser }) => {
+const LoginModal = ({ setModalLogin, setUser }) => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Login = ({ setUser }) => {
         setUser(response.data.token);
         console.log("ça fonctionne, mon token est", response.data.token);
         navigate("/");
+        setModalLogin(false);
       }
     } catch (error) {
       console.log(error.message);
@@ -31,6 +33,9 @@ const Login = ({ setUser }) => {
   return (
     <div>
       <div className="login-form">
+        <p className="close-icon" onClick={() => setModalLogin(false)}>
+          <FontAwesomeIcon icon="square-xmark" />
+        </p>
         <h2>Se connecter</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -59,4 +64,4 @@ const Login = ({ setUser }) => {
   );
 };
 
-export default Login;
+export default LoginModal;

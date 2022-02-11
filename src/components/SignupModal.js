@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Signup = () => {
+const SignupModal = ({ setModalSignup, setUser }) => {
   const [username, setUsername] = useState("");
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +20,9 @@ const Signup = () => {
       console.log(response.data);
 
       if (response.data.token) {
+        setUser(response.data.token);
         navigate("/");
+        setModalSignup(false);
       }
     } catch (error) {
       console.log("error.message : ", error.message);
@@ -31,6 +34,9 @@ const Signup = () => {
 
   return (
     <div className="signup-form">
+      <p className="close-icon" onClick={() => setModalSignup(false)}>
+        <FontAwesomeIcon icon="square-xmark" />
+      </p>
       <h2>S'inscrire</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -74,4 +80,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupModal;
