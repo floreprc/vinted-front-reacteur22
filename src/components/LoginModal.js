@@ -1,9 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LoginModal = ({ setModalLogin, setUser }) => {
+const LoginModal = ({ setModalLogin, setUser, setModalSignup }) => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -55,9 +55,14 @@ const LoginModal = ({ setModalLogin, setUser }) => {
 
           <input type="submit" value="Se connecter" className="submit" />
         </form>{" "}
-        <Link to={"/signup"}>
-          <p>Pas encore de compte ? Inscris-toi !</p>
-        </Link>
+        <p
+          onClick={() => {
+            setModalLogin(false);
+            setModalSignup(true);
+          }}
+        >
+          Pas encore de compte ? Inscris-toi !
+        </p>
         <p className="error-message">{errorMessage}</p>
       </div>{" "}
     </div>

@@ -9,14 +9,20 @@ import { useState } from "react";
 import Navigation from "./components/Navigation";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCircleInfo, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
-library.add(faCircleInfo, faSquareXmark);
+import {
+  faCircleInfo,
+  faSquareXmark,
+  faAngleDown,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faCircleInfo, faSquareXmark, faAngleDown, faTrash);
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
   const [modalSignup, setModalSignup] = useState(false);
   const [modalLogin, setModalLogin] = useState(false);
   const [resultsTab, setResultsTab] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const setUser = (token) => {
     console.log("mon token récupéré est ", token);
@@ -39,9 +45,13 @@ function App() {
         modalLogin={modalLogin}
         resultsTab={resultsTab}
         setResultsTab={setResultsTab}
+        setIsLoading={setIsLoading}
       />
       <Routes>
-        <Route path="/" element={<Home resultsTab={resultsTab} />}></Route>
+        <Route
+          path="/"
+          element={<Home resultsTab={resultsTab} isLoading={isLoading} />}
+        ></Route>
         <Route path="/offer/:id" element={<Offer />}></Route>
         <Route path="/signup" element={<Signup setUser={setUser} />}></Route>
         <Route path="/login" element={<Login setUser={setUser} />}></Route>
