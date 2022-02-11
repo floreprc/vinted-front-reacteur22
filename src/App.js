@@ -14,6 +14,9 @@ library.add(faCircleInfo, faSquareXmark);
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
+  const [modalSignup, setModalSignup] = useState(false);
+  const [modalLogin, setModalLogin] = useState(false);
+  const [resultsTab, setResultsTab] = useState([]);
 
   const setUser = (token) => {
     console.log("mon token récupéré est ", token);
@@ -27,9 +30,18 @@ function App() {
 
   return (
     <Router>
-      <Navigation token={token} setUser={setUser} />
+      <Navigation
+        token={token}
+        setUser={setUser}
+        setModalSignup={setModalSignup}
+        setModalLogin={setModalLogin}
+        modalSignup={modalSignup}
+        modalLogin={modalLogin}
+        resultsTab={resultsTab}
+        setResultsTab={setResultsTab}
+      />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home resultsTab={resultsTab} />}></Route>
         <Route path="/offer/:id" element={<Offer />}></Route>
         <Route path="/signup" element={<Signup setUser={setUser} />}></Route>
         <Route path="/login" element={<Login setUser={setUser} />}></Route>

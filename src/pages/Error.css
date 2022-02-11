@@ -1,0 +1,28 @@
+/* Error page */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(66, 66, 66);
+}
+
+.error-page img {
+  width: 500px;
+  padding: 40px 0;
+}
+
+.error-page button {
+  background-color: #09adb6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.error-page button:hover {
+  background-color: white;
+  color: #09adb6;
+  border: 1px solid #09adb6;
+}
