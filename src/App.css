@@ -44,6 +44,20 @@ nav .button-nav button:hover {
   color: white;
 }
 
+nav .button-nav .exit-button {
+  background-color: #aa0e42;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #aa0e42;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+nav .button-nav .exit-button:hover {
+  background-color: #eecfda;
+  color: #aa0e42;
+}
+
 /* Loading */
 .loader {
   border: 14px solid #f3f3f3; /* Light grey */
@@ -175,21 +189,21 @@ nav .button-nav button:hover {
   background-color: white;
   color: #09adb6;
   border: 1px solid #09adb6;
-  padding: 5px 0;
-  border-radius: 5px;
-  margin: 20px 0;
 }
 
 /* Signup */
 
-.signup-form {
+.signup-form,
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
 }
 
-.signup-form h2 {
+.signup-form h2,
+.login-form h2,
+.error-page h2 {
   font-size: 24px;
   font-weight: 700;
   padding-bottom: 20px;
@@ -213,23 +227,6 @@ form p {
   color: grey;
 }
 
-/* form .submit {
-  background-color: #09adb6;
-  border: 1px solid #09adb6;
-  color: white;
-  border: none;
-  font-size: 18px;
-  padding: 10px 0;
-  border-radius: 5px;
-  margin: 20px 0;
-}
-
-form .submit:hover {
-  background-color: white;
-  color: #09adb6;
-  border: 1px solid #09adb6;
-} */
-
 form .submit {
   background-color: #09adb6;
   color: white;
@@ -249,4 +246,33 @@ form .submit:hover {
 
 form .newsletter {
   margin: 5px auto;
+}
+
+/* Error page */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(66, 66, 66);
+}
+
+.error-page img {
+  width: 500px;
+  padding: 40px 0;
+}
+
+.error-page button {
+  background-color: #09adb6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.error-page button:hover {
+  background-color: white;
+  color: #09adb6;
+  border: 1px solid #09adb6;
 }

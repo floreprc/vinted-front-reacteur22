@@ -1,8 +1,7 @@
-import Cookies from "js-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/img/vinted_logo.png";
 
-const Navigation = () => {
+const Navigation = ({ token, setUser }) => {
   const navigate = useNavigate();
 
   return (
@@ -13,10 +12,11 @@ const Navigation = () => {
 
       <div className="button-nav">
         {" "}
-        {Cookies.get("token") ? (
+        {token ? (
           <button
+            className="exit-button"
             onClick={() => {
-              Cookies.remove("token");
+              setUser(null);
               navigate("/");
             }}
           >

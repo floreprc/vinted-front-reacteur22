@@ -1,37 +1,25 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const signupFunc = async () => {
-      const response = await axios.post(
-        "https://vinted-reacteur22.herokuapp.com/user/signup",
-        { username: username, email: mail, password: password }
-      );
-      console.log(response);
-      Cookies.set("token", response.data.token);
-    };
-    signupFunc();
-    navigate("/");
-  };
 
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       const response = await axios.get(
-  //         "https://vinted-reacteur22.herokuapp.com/user/signup"
-  //       );
-  //       setData(response.data);
-  //       setIsLoading(false);
-  //     };
-  //     fetchData();
-  //   }, []);
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await axios.post(
+      "https://vinted-reacteur22.herokuapp.com/user/signup",
+      { username: username, email: mail, password: password }
+    );
+    console.log(response.data);
+
+    if (response.data.token) {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="signup-form">
