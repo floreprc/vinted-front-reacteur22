@@ -5,6 +5,7 @@ import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import Navigation from "./components/Navigation";
 import Cookies from "js-cookie";
@@ -35,6 +36,7 @@ function App() {
   const [resultsTab, setResultsTab] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Token management
   const setUser = (token) => {
     console.log("mon token récupéré est ", token);
     if (token) {
@@ -68,6 +70,7 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser} />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }

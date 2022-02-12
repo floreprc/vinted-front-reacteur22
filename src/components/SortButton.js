@@ -8,7 +8,7 @@ const SortButton = ({
   setSortValue,
 }) => {
   return (
-    <div className="filter">
+    <div className="filter filter-sort ">
       <button
         onClick={() => {
           setSortBox(!sortBox);

@@ -53,15 +53,28 @@
 
 .item-description button {
   background-color: #09adb6;
+  border: 1px solid #09adb6;
   color: white;
-  border: none;
   padding: 5px 0;
   border-radius: 5px;
-  margin: 20px 0;
+  margin: 10px 0;
+  font-weight: 700;
 }
 
 .item-description button:hover {
   background-color: white;
   color: #09adb6;
+}
+
+.item-description .home-return {
+  background-color: white;
+  color: #09adb6;
   border: 1px solid #09adb6;
+  width: 100%;
+  font-weight: 400;
+}
+
+.item-description .home-return:hover {
+  background-color: #09adb6;
+  color: white;
 }

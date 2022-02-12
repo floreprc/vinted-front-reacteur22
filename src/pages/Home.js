@@ -10,6 +10,12 @@ const Home = ({ resultsTab, isLoading }) => {
     <div>
       <div className="introPic">
         <img src={homePicture} alt="Thrift shop" />
+        <div className="wrapped pop-up-position">
+          <div className="pop-up-home">
+            <h1>Prêts à faire du tri dans vos placards ?</h1>{" "}
+            <button>Vends maintenant</button>
+          </div>
+        </div>
       </div>
       {isLoading ? (
         <Loading />
@@ -43,7 +49,6 @@ const Home = ({ resultsTab, isLoading }) => {
           )}
         </div>
       )}
-      ;
     </div>
   );
 };

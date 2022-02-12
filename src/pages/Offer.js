@@ -1,5 +1,5 @@
 import "./Offer.css";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../components/Loading";
@@ -65,6 +65,11 @@ const Offer = () => {
             <p>{item.product_description}</p>
             <div className="owner">{item.owner.account.username}</div>
             <button>Acheter</button>
+            <Link to={"/"}>
+              <button className="home-return">
+                Retour à la page des résultats
+              </button>
+            </Link>
           </div>
         </div>
       )}
