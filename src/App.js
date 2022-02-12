@@ -16,6 +16,7 @@ import {
   faTrash,
   faArrowDownWideShort,
   faArrowUpWideShort,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faCircleInfo,
@@ -23,7 +24,8 @@ library.add(
   faAngleDown,
   faTrash,
   faArrowDownWideShort,
-  faArrowUpWideShort
+  faArrowUpWideShort,
+  faMagnifyingGlass
 );
 
 function App() {

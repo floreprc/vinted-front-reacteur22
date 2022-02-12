@@ -81,6 +81,7 @@ nav input::placeholder {
 
 .searching-inputs {
   gap: 10px;
+  position: relative;
 }
 
 .searching-inputs button {
@@ -107,6 +108,11 @@ nav input::placeholder {
   position: relative;
 }
 
+.searching-inputs .filter button {
+  display: flex;
+  align-items: center;
+}
+
 .searching-inputs .selected {
   border: 1px solid #09adb6;
   background-color: #caeff1;
@@ -116,7 +122,7 @@ nav input::placeholder {
 .searching-inputs .selected:focus {
   border: 1px solid #09adb6;
   background-color: #8aeff7;
-  color: rgb(95, 95, 95);
+  color: #5f5f5f;
 }
 
 nav div p {
@@ -135,6 +141,7 @@ nav div p {
   left: 0;
   border-radius: 5px;
   padding: 5px;
+  padding-top: 10px;
   box-shadow: 1px 0.7px 1.2px rgba(0, 0, 0, 0.068),
     2.5px 1.7px 3.1px rgba(0, 0, 0, 0.098),
     5.1px 3.5px 6.4px rgba(0, 0, 0, 0.122),
@@ -151,7 +158,6 @@ nav div p {
 .chooseAPrice .price-selection div {
   display: flex;
   flex-direction: column;
-  align-items: start;
 }
 
 .chooseAPrice .price-selection input {
@@ -195,9 +201,34 @@ nav div p {
 .searching-inputs .chooseAPrice .delete-off,
 .searching-inputs .chooseAPrice .delete-off:hover {
   background-color: #d4d4d4;
-  border: 1px solid #929292;
+  border: 1px solid #d4d4d4;
   color: white;
   padding: 5px;
   border-radius: 5px;
   margin: 20px 10px;
+}
+
+.filter p {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sortItems {
+  margin-top: 11rem;
+}
+
+.sortItems button {
+  width: 200px;
+  margin: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.delete-search-icon {
+  position: absolute;
+  left: 15rem;
 }

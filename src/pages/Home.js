@@ -3,6 +3,7 @@ import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
+import noResultPic from "../assets/img/no-result.svg";
 
 const Home = ({ resultsTab, isLoading }) => {
   return (
@@ -34,6 +35,12 @@ const Home = ({ resultsTab, isLoading }) => {
               </Link>
             );
           })}
+          {resultsTab.length < 1 && (
+            <div className="no-result-div">
+              <img src={noResultPic} alt="no-result-pic" />
+              <p>Oups ! Aucun résultat trouvé</p>
+            </div>
+          )}
         </div>
       )}
       ;

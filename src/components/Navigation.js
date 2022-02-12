@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/img/vinted_logo.png";
 import SignupModal from "./SignupModal";
 import LoginModal from "./LoginModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navigation = ({
   token,
@@ -108,12 +109,21 @@ const Navigation = ({
         <input
           type="text"
           id="searched-bar"
+          value={searchedText}
           placeholder="Rechercher des articles"
           onChange={(event) => {
             setSearchedText(event.target.value);
             console.log(searchedText);
           }}
-        ></input>
+        ></input>{" "}
+        <p className="search-icon">
+          <FontAwesomeIcon icon="magnifying-glass" color="#5F5F5F" />
+        </p>
+        {searchedText && (
+          <p onClick={() => setSearchedText("")} className="delete-search-icon">
+            <FontAwesomeIcon icon="square-xmark" color="#5F5F5F" />
+          </p>
+        )}
         <PriceButton
           setPriceBox={setPriceBox}
           priceBox={priceBox}

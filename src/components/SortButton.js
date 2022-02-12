@@ -16,7 +16,7 @@ const SortButton = ({
         }}
       >
         <p>
-          Trier par
+          <p>Trier par :</p>
           {sortValue === "asc" ? (
             <FontAwesomeIcon icon="arrow-up-wide-short" color="#09adb6" />
           ) : (
@@ -32,19 +32,20 @@ const SortButton = ({
               setSortValue("asc");
               setSortBox(!sortBox);
             }}
-            className={sortValue === "asc" ? "selected-sort" : ""}
+            className={sortValue === "asc" ? "selected" : ""}
           >
             <FontAwesomeIcon icon="arrow-up-wide-short" />
-            Prix croissant
+            <p>Prix croissant</p>
           </button>
           <button
             onClick={() => {
               setSortValue("desc");
               setSortBox(!sortBox);
             }}
+            className={sortValue === "desc" ? "selected" : ""}
           >
             <FontAwesomeIcon icon="arrow-down-wide-short" />
-            Prix décroissant
+            <p>Prix décroissant</p>
           </button>
           <div></div>
         </div>
