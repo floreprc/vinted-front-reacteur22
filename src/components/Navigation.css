@@ -67,9 +67,12 @@ nav .button-nav .exit-button:hover {
 nav input {
   background-color: #f5f6f7;
   border: 1px solid #f5f6f7;
-  padding: 5px 30px;
   font-size: 16px;
   border-radius: 5px;
+}
+
+#searched-bar {
+  padding: 5px 30px;
 }
 
 nav input::placeholder {
@@ -84,11 +87,36 @@ nav input::placeholder {
   border: 1px solid #b2b2b3;
   background-color: white;
   color: #b2b2b3;
-  padding: 5px 10px;
   font-size: 16px;
+  padding: 5px 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+.searching-inputs button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.searching-inputs button:focus {
+  outline: 1px dotted;
+  outline: 1px auto -webkit-focus-ring-color;
+}
+
+.searching-inputs .filter {
+  position: relative;
+}
+
+.searching-inputs .selected {
+  border: 1px solid #09adb6;
+  background-color: #caeff1;
+  color: grey;
+}
+
+.searching-inputs .selected:focus {
+  border: 1px solid #09adb6;
+  background-color: #8aeff7;
+  color: rgb(95, 95, 95);
 }
 
 nav div p {
@@ -96,24 +124,80 @@ nav div p {
 }
 
 .chooseAPrice,
-.sortByPrice {
+.sortItems {
   position: absolute;
   background-color: white;
-  top: 7%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  margin-top: 13rem;
+  left: 0;
+  border-radius: 5px;
+  padding: 5px;
   box-shadow: 1px 0.7px 1.2px rgba(0, 0, 0, 0.068),
     2.5px 1.7px 3.1px rgba(0, 0, 0, 0.098),
     5.1px 3.5px 6.4px rgba(0, 0, 0, 0.122),
     10.6px 7.3px 13.1px rgba(0, 0, 0, 0.152), 29px 20px 36px rgba(0, 0, 0, 0.22);
 }
 
-.chooseAPrice {
-  height: 50px;
-  width: 200px;
-  left: 43%;
+.chooseAPrice .price-selection,
+.chooseAPrice .buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.chooseAPrice .price-selection div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.chooseAPrice .price-selection input {
+  width: 100px;
 }
 
 .sortByPrice {
   height: 50px;
   width: 200px;
   left: 48%;
+}
+
+.searching-inputs .chooseAPrice .validate {
+  background-color: #09adb6;
+  border: 1px solid #09adb6;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 20px 10px;
+}
+
+.searching-inputs .chooseAPrice .validate:hover {
+  background-color: white;
+  color: #09adb6;
+}
+
+.searching-inputs .chooseAPrice .delete {
+  background-color: #aa0e42;
+  border: 1px solid #aa0e42;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 20px 10px;
+}
+
+.searching-inputs .chooseAPrice .delete:hover {
+  background-color: white;
+  color: #aa0e42;
+}
+
+.searching-inputs .chooseAPrice .delete-off,
+.searching-inputs .chooseAPrice .delete-off:hover {
+  background-color: #d4d4d4;
+  border: 1px solid #929292;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 20px 10px;
 }

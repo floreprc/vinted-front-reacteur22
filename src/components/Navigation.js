@@ -1,5 +1,6 @@
 import "./Navigation.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PriceButton from "./PriceButton";
+import SortButton from "./SortButton";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,6 +24,9 @@ const Navigation = ({
   const [searchedText, setSearchedText] = useState("");
   const [priceBox, setPriceBox] = useState(false);
   const [sortBox, setSortBox] = useState(false);
+  const [minValue, setMinValue] = useState();
+  const [maxValue, setMaxValue] = useState();
+  const [sortValue, setSortValue] = useState("asc");
 
   useEffect(() => {
     const fetchData = async (token) => {
@@ -44,8 +48,28 @@ const Navigation = ({
         let toAdd = "";
         if (searchedText) {
           toAdd += `?title=${searchedText}`;
-          console.log("Hello");
         }
+        if (minValue) {
+          if (searchedText) {
+            toAdd += `&priceMin=${minValue}`;
+          } else {
+            toAdd += `?priceMin=${minValue}`;
+          }
+        }
+        if (maxValue) {
+          if (searchedText || minValue) {
+            toAdd += `&priceMax=${maxValue}`;
+          } else {
+            toAdd += `?priceMax=${maxValue}`;
+          }
+        }
+        if (searchedText || minValue || maxValue) {
+          toAdd += `&sort=price-${sortValue}`;
+        } else {
+          toAdd += `?sort=price-${sortValue}`;
+        }
+        console.log(toAdd);
+        console.log(minValue);
         const response = await axios.get(
           `https://vinted-reacteur22.herokuapp.com/offers${toAdd}`
         );
@@ -54,7 +78,14 @@ const Navigation = ({
       } catch (error) {}
     };
     searchedItem();
-  }, [searchedText, setResultsTab, setIsLoading]);
+  }, [
+    searchedText,
+    setResultsTab,
+    setIsLoading,
+    minValue,
+    maxValue,
+    sortValue,
+  ]);
 
   useEffect(() => {
     const scrollingMgmt = () => {
@@ -83,62 +114,22 @@ const Navigation = ({
             console.log(searchedText);
           }}
         ></input>
-        <button
-          onClick={() => {
-            setPriceBox(!priceBox);
-            setSortBox(false);
-          }}
-        >
-          <p>Prix</p>
-          <FontAwesomeIcon icon="angle-down" />
-        </button>
-        {priceBox && (
-          <div className="chooseAPrice">
-            Trier par prix{" "}
-            <button
-              onClick={() => {
-                setPriceBox(false);
-              }}
-            >
-              Appliquer
-            </button>
-            <button
-              onClick={() => {
-                setPriceBox(false);
-              }}
-            >
-              <FontAwesomeIcon icon="trash" />
-            </button>
-          </div>
-        )}
-        <button
-          onClick={() => {
-            setSortBox(!sortBox);
-            setPriceBox(false);
-          }}
-        >
-          <p>Trier par</p>
-          <FontAwesomeIcon icon="angle-down" />
-        </button>
-        {sortBox && (
-          <div className="sortByPrice">
-            Trier par prix croissant ou décroissant{" "}
-            <button
-              onClick={() => {
-                setSortBox(false);
-              }}
-            >
-              Appliquer
-            </button>
-            <button
-              onClick={() => {
-                setSortBox(false);
-              }}
-            >
-              <FontAwesomeIcon icon="trash" />
-            </button>
-          </div>
-        )}
+        <PriceButton
+          setPriceBox={setPriceBox}
+          priceBox={priceBox}
+          setSortBox={setSortBox}
+          minValue={minValue}
+          setMinValue={setMinValue}
+          maxValue={maxValue}
+          setMaxValue={setMaxValue}
+        />
+        <SortButton
+          setSortBox={setSortBox}
+          sortBox={sortBox}
+          setPriceBox={setPriceBox}
+          sortValue={sortValue}
+          setSortValue={setSortValue}
+        />
       </div>
 
       <div className="button-nav">

@@ -14,8 +14,17 @@ import {
   faSquareXmark,
   faAngleDown,
   faTrash,
+  faArrowDownWideShort,
+  faArrowUpWideShort,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faCircleInfo, faSquareXmark, faAngleDown, faTrash);
+library.add(
+  faCircleInfo,
+  faSquareXmark,
+  faAngleDown,
+  faTrash,
+  faArrowDownWideShort,
+  faArrowUpWideShort
+);
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
