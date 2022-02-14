@@ -18,7 +18,6 @@ const Navigation = ({
   setIsLoading,
   pageNumber,
   resultsForEachPage,
-  publishAccess,
   newOfferSubmited,
   setNewOfferSubmited,
 }) => {
@@ -75,14 +74,12 @@ const Navigation = ({
         }
         toAdd += `&resultsForEachPage=${resultsForEachPage}&page=${pageNumber}`;
 
-        console.log(toAdd);
-        console.log(minValue);
+        // console.log(toAdd);
         const response = await axios.get(
           `https://vinted-reacteur22.herokuapp.com/offers${toAdd}`
         );
         setResultsTab(response.data.offers);
         setIsLoading(false);
-        setNewOfferSubmited(false);
       } catch (error) {}
     };
     searchedItem();
@@ -116,7 +113,11 @@ const Navigation = ({
     <nav className="wrapped nav-lines">
       <div className="big-screen-div">
         <Link to={"/"}>
-          <img src={logo} alt="logo vinted" />
+          <img
+            src={logo}
+            alt="logo vinted"
+            onClick={() => setNewOfferSubmited(false)}
+          />
         </Link>
 
         {/* Filter bar */}

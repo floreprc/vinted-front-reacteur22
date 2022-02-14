@@ -47,6 +47,11 @@
   color: grey;
 }
 
+.main-info {
+  padding: 5px 0;
+  color: rgb(54, 54, 54);
+}
+
 .no-result-div {
   display: flex;
   flex-direction: column;
@@ -92,7 +97,9 @@
 
 .introPic .pop-up-home button,
 nav .button-nav .sell-now,
-.add-an-item {
+.add-an-item,
+.pagination button,
+.offer-published button {
   background-color: #09adb6;
   border: 1px solid #09adb6;
   color: white;
@@ -110,6 +117,23 @@ nav .button-nav .sell-now,
 nav .button-nav .sell-now:hover {
   background-color: white;
   color: #09adb6;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button,
+.pagination p {
+  font-size: 20px;
+}
+
+.pagination p {
+  color: grey;
+  font-weight: bold;
+  padding: 20px 10px;
 }
 
 @media (min-width: 769px) {

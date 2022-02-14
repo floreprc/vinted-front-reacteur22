@@ -52,6 +52,7 @@
 
 .picture-button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -63,7 +64,6 @@ input[type="file"] {
   height: 100px;
   margin: 30px auto;
   z-index: 5;
-  /* padding: 30px 50px;  */
   /* background-color: blue; */
 }
 
@@ -78,4 +78,27 @@ input[type="file"] {
   /* left: 29rem; */
   /* top: 42%;*/
   padding: 10px 20px;
+}
+
+.create-offer-page .exchange-box label {
+  display: block;
+  margin-left: 50%;
+  padding-left: 0px;
+}
+
+.offer-published {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.offer-published img {
+  max-width: 300px;
+  padding-bottom: 50px;
+}
+
+.offer-published button {
+  padding: 10px;
+  margin: 10px;
 }

@@ -38,10 +38,7 @@ const Home = ({
 
                     <img src={elem.product_image.secure_url} alt="" />
 
-                    <div className="main-info">
-                      {elem.product_price} €{" "}
-                      <FontAwesomeIcon icon="circle-info" />
-                    </div>
+                    <div className="main-info">{elem.product_price} € </div>
                     <div className="other-infos">
                       <p>{elem.product_details[1].TAILLE}</p>
                       <p>{elem.product_details[0].MARQUE}</p>
@@ -57,17 +54,20 @@ const Home = ({
               </div>
             )}
           </div>
-          <p>{pageNumber}</p>
-          {pageNumber > 1 && (
-            <button onClick={() => setPageNumber(pageNumber - 1)}>
-              Page précédente
-            </button>
-          )}
-          {resultsTab.length >= resultsForEachPage && (
-            <button onClick={() => setPageNumber(pageNumber + 1)}>
-              Page suivant
-            </button>
-          )}
+          <div className="pagination">
+            {" "}
+            {pageNumber > 1 && (
+              <button onClick={() => setPageNumber(pageNumber - 1)}>
+                <FontAwesomeIcon icon="circle-arrow-left" />
+              </button>
+            )}
+            <p>{pageNumber}</p>
+            {resultsTab.length >= resultsForEachPage && (
+              <button onClick={() => setPageNumber(pageNumber + 1)}>
+                <FontAwesomeIcon icon="circle-arrow-right" />
+              </button>
+            )}
+          </div>
         </>
       )}
     </div>

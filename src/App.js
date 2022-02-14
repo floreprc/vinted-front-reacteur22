@@ -12,7 +12,6 @@ import Navigation from "./components/Navigation";
 import Cookies from "js-cookie";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faCircleInfo,
   faSquareXmark,
   faAngleDown,
   faTrash,
@@ -20,16 +19,19 @@ import {
   faArrowUpWideShort,
   faMagnifyingGlass,
   faPlus,
+  faCircleArrowLeft,
+  faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
-  faCircleInfo,
   faSquareXmark,
   faAngleDown,
   faTrash,
   faArrowDownWideShort,
   faArrowUpWideShort,
   faMagnifyingGlass,
-  faPlus
+  faPlus,
+  faCircleArrowLeft,
+  faCircleArrowRight
 );
 
 function App() {
@@ -93,6 +95,7 @@ function App() {
             <CreateOffer
               token={token}
               setNewOfferSubmited={setNewOfferSubmited}
+              newOfferSubmited={newOfferSubmited}
             />
           }
         ></Route>
