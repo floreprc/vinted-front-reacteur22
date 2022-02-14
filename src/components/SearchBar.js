@@ -1,3 +1,5 @@
+// Search bar (with price and sort buttons included)
+
 import PriceButton from "./PriceButton";
 import SortButton from "./SortButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

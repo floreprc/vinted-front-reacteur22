@@ -1,3 +1,5 @@
+// Button to sort result by a min or/and a max price
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PriceButton = ({
@@ -11,6 +13,7 @@ const PriceButton = ({
 }) => {
   return (
     <div className="filter">
+      {/* Button */}
       <button
         onClick={() => {
           setPriceBox(!priceBox);
@@ -21,6 +24,7 @@ const PriceButton = ({
         <p>Prix</p>
         <FontAwesomeIcon icon="angle-down" />
       </button>
+      {/* Popup */}
       {priceBox && (
         <div className="chooseAPrice">
           <form>

@@ -1,3 +1,5 @@
+// Modal to sign up from all the pages
+
 import "./SignUpAndLogin.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -11,6 +13,8 @@ const SignupModal = ({ setModalSignup, setUser, setModalLogin }) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
+
+  // Request to backend to create a new user
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -34,6 +38,7 @@ const SignupModal = ({ setModalSignup, setUser, setModalLogin }) => {
   };
 
   return (
+    // Sign up form
     <div className="signup-form">
       <p className="close-icon" onClick={() => setModalSignup(false)}>
         <FontAwesomeIcon icon="square-xmark" />

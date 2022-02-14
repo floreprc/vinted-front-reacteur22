@@ -1,3 +1,5 @@
+/* Common css */
+
 *,
 body {
   font-family: "IBM Plex Sans", sans-serif;
@@ -28,35 +30,6 @@ a {
     width: 100%;
   }
 
-  nav .search-and-buttons .button-nav {
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-  nav .search-and-buttons .searching-inputs {
-    justify-content: space-between;
-    width: 100%;
-    padding-right: 5px;
-  }
-  .searched-bar {
-    width: 60%;
-    flex: 8;
-  }
-  #searched-bar-value {
-    width: 95%;
-  }
-  .searching-inputs .delete-search-icon {
-    left: 50%;
-  }
-  .searching-inputs .filter-sort {
-    min-width: 165px;
-  }
-  .chooseAPrice,
-  .sortItems {
-    right: 0;
-    left: auto;
-  }
-
   .big-screen {
     background-color: blue;
     display: none;
@@ -68,10 +41,4 @@ a {
     border-top: 1px solid rgb(199, 199, 199);
     padding: 10px 35px;
   }
-}
-
-@media (max-width: 768px) {
-  /* body {
-    background-color: blanchedalmond;
-  } */
 }

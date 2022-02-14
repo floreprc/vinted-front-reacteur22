@@ -9,6 +9,7 @@
   height: 100vh;
 }
 
+/* image */
 .img-item {
   width: 300px;
   height: 400px;
@@ -20,6 +21,7 @@
   object-fit: cover;
 }
 
+/* description box */
 .item-description {
   background-color: white;
   height: 400px;
@@ -77,4 +79,25 @@
 .item-description .home-return:hover {
   background-color: #09adb6;
   color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 768px) {
+  .background-item {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-item {
+    width: 90%;
+  }
+  .item-description {
+    width: 90%;
+  }
 }

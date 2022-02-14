@@ -1,3 +1,5 @@
+// Animation of loading parts
+
 import "./Loading.css";
 
 const Loading = () => {

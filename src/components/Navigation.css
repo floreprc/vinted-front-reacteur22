@@ -19,6 +19,8 @@ nav div {
   align-items: center;
 }
 
+/* Search bar and buttons */
+
 nav .search-and-buttons {
   justify-content: space-between;
   width: 100%;
@@ -147,6 +149,8 @@ nav div p {
   padding-right: 20px;
 }
 
+/* Filters */
+
 .chooseAPrice,
 .sortItems {
   position: absolute;
@@ -156,7 +160,7 @@ nav div p {
   height: auto;
   width: auto;
   margin-top: 13rem;
-  right: 0;
+  left: 0;
   border-radius: 5px;
   padding: 5px;
   padding-top: 10px;
@@ -241,6 +245,7 @@ nav div p {
   margin: 10px;
 }
 
+/* Search */
 .search-icon {
   padding-right: 10px;
 }
@@ -261,12 +266,56 @@ nav div p {
   flex-direction: column;
 }
 
+/* Responsive css */
+
 @media (min-width: 1201px) {
   .small-screen {
     display: none;
   }
 }
 
+@media (max-width: 1200px) {
+  nav .search-and-buttons .button-nav {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  nav .search-and-buttons .searching-inputs {
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 5px;
+  }
+  .searched-bar {
+    width: 60%;
+    flex: 8;
+  }
+  #searched-bar-value {
+    width: 95%;
+  }
+  .searching-inputs .delete-search-icon {
+    left: 50%;
+  }
+  .searching-inputs .filter-sort {
+    min-width: 165px;
+  }
+  .chooseAPrice,
+  .sortItems {
+    right: 0;
+    left: auto;
+  }
+
+  .big-screen {
+    background-color: blue;
+    display: none;
+  }
+  .small-screen {
+    display: flex;
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid rgb(199, 199, 199);
+    padding: 10px 35px;
+  }
+}
 @media (max-width: 768px) {
   .searched-bar {
     flex: 20;
@@ -283,5 +332,9 @@ nav div p {
 
   .sell-now {
     display: none;
+  }
+  .chooseAPrice,
+  .sortItems {
+    right: 0;
   }
 }

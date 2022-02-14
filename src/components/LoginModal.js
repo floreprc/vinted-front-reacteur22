@@ -1,3 +1,5 @@
+// Modal to login from all the pages
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -9,6 +11,7 @@ const LoginModal = ({ setModalLogin, setUser, setModalSignup }) => {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Request to check if the user exists
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -31,6 +34,7 @@ const LoginModal = ({ setModalLogin, setUser, setModalSignup }) => {
   };
 
   return (
+    // Login form
     <div>
       <div className="login-form">
         <p className="close-icon" onClick={() => setModalLogin(false)}>

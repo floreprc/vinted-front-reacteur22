@@ -1,3 +1,5 @@
+// Button to sort results by ascendant or descendant price
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SortButton = ({
@@ -9,6 +11,7 @@ const SortButton = ({
 }) => {
   return (
     <div className="filter filter-sort ">
+      {/* Button */}
       <button
         onClick={() => {
           setSortBox(!sortBox);
@@ -25,6 +28,7 @@ const SortButton = ({
         </p>
         <FontAwesomeIcon icon="angle-down" />
       </button>
+      {/* Popup */}
       {sortBox && (
         <div className="sortItems">
           <button

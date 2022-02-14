@@ -9,6 +9,7 @@ const Offer = () => {
   const { id } = useParams();
   const [item, setItem] = useState();
 
+  // Request on the database to find infos on the selected item
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(

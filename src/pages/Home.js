@@ -11,17 +11,26 @@ const Home = ({
   pageNumber,
   setPageNumber,
   resultsForEachPage,
+  token,
+  setModalLogin,
 }) => {
   return (
     <div>
+      {/* Main image before the caroussel */}
       <div className="introPic">
         <img src={homePicture} alt="Thrift shop" />
         <div className="wrapped pop-up-position">
           <div className="pop-up-home">
             <h1>Prêts à faire du tri dans vos placards ?</h1>{" "}
-            <Link to="/publish">
-              <button>Vends maintenant</button>
-            </Link>
+            {token ? (
+              <Link to="/publish">
+                <button>Vends maintenant</button>
+              </Link>
+            ) : (
+              <button onClick={() => setModalLogin(true)}>
+                Vends maintenant
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -29,6 +38,7 @@ const Home = ({
         <Loading />
       ) : (
         <>
+          {/* Caroussel with items */}
           <div className="caroussel wrapped">
             {resultsTab.map((elem, index) => {
               return (
@@ -54,6 +64,7 @@ const Home = ({
               </div>
             )}
           </div>
+          {/* Pagination */}
           <div className="pagination">
             {" "}
             {pageNumber > 1 && (

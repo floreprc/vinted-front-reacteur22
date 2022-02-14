@@ -78,11 +78,13 @@ function App() {
           path="/"
           element={
             <Home
+              token={token}
               resultsTab={resultsTab}
               isLoading={isLoading}
               setPageNumber={setPageNumber}
               pageNumber={pageNumber}
               resultsForEachPage={resultsForEachPage}
+              setModalLogin={setModalLogin}
             ></Home>
           }
         />

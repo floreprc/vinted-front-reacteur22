@@ -1,3 +1,4 @@
+/* Create an offer page */
 .create-offer-page {
   background-color: #f5f6f7;
 }
@@ -8,7 +9,6 @@
 }
 
 .create-offer-page > div {
-  /* background-color: rgb(158, 158, 216); */
   display: flex;
   justify-content: center;
 }
@@ -23,8 +23,6 @@
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin: 10px;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .create-offer-page form > div label {
@@ -64,7 +62,6 @@ input[type="file"] {
   height: 100px;
   margin: 30px auto;
   z-index: 5;
-  /* background-color: blue; */
 }
 
 .picture-button div {
@@ -74,9 +71,6 @@ input[type="file"] {
   background-color: transparent;
   color: #09adb6;
   z-index: 2;
-  /* align-self: center; */
-  /* left: 29rem; */
-  /* top: 42%;*/
   padding: 10px 20px;
 }
 
@@ -86,11 +80,13 @@ input[type="file"] {
   padding-left: 0px;
 }
 
+/* display when the offer has been published */
 .offer-published {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 80vh;
+  background-color: white;
 }
 
 .offer-published img {

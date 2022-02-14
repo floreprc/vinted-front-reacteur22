@@ -45,7 +45,7 @@ const Navigation = ({
     fetchData(token);
   }, [token]);
 
-  // Request of item results, integrating filters (title, price, sorting)
+  // Request of item results (displayed on home page), integrating filters (title, price, sorting)
   useEffect(() => {
     const searchedItem = async () => {
       try {
@@ -138,10 +138,11 @@ const Navigation = ({
             responsive="big-screen"
           />
 
-          {/* authentification buttons + create new offer button */}
+          {/* authentification buttons + create new offer button  >> distinction between an authentificated and unauthentificated user*/}
           <div className="button-nav">
             {" "}
             {token ? (
+              // Authentificated version
               <div>
                 {username && <p>Bonjour {username}</p>}
                 <button
@@ -158,6 +159,7 @@ const Navigation = ({
                 </Link>
               </div>
             ) : (
+              // Unauthentificated version
               <div>
                 <button onClick={() => setModalSignup(true)}>S'inscrire</button>
                 <button
@@ -167,12 +169,11 @@ const Navigation = ({
                   Se connecter
                 </button>
                 <Link to="/login">
-                  <button className="sell-now" onClick={() => {}}>
-                    Vends maintenant
-                  </button>
+                  <button className="sell-now">Vends maintenant</button>
                 </Link>
               </div>
             )}
+            {/* Modals to sign up and login */}
             {modalSignup && (
               <div className="background">
                 <SignupModal
@@ -194,6 +195,7 @@ const Navigation = ({
           </div>
         </div>
       </div>
+      {/* search bar for smaller screens */}
       <div>
         <SearchBar
           searchedText={searchedText}

@@ -1,3 +1,5 @@
+// For non-existing pages
+
 import errorPicture from "../assets/img/error_picture.svg";
 import { Link } from "react-router-dom";
 import "./Error.css";
