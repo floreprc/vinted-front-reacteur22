@@ -16,6 +16,11 @@ const Navigation = ({
   modalSignup,
   setResultsTab,
   setIsLoading,
+  pageNumber,
+  resultsForEachPage,
+  publishAccess,
+  newOfferSubmited,
+  setNewOfferSubmited,
 }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState();
@@ -68,6 +73,8 @@ const Navigation = ({
         } else {
           toAdd += `?sort=price-${sortValue}`;
         }
+        toAdd += `&resultsForEachPage=${resultsForEachPage}&page=${pageNumber}`;
+
         console.log(toAdd);
         console.log(minValue);
         const response = await axios.get(
@@ -75,6 +82,7 @@ const Navigation = ({
         );
         setResultsTab(response.data.offers);
         setIsLoading(false);
+        setNewOfferSubmited(false);
       } catch (error) {}
     };
     searchedItem();
@@ -85,6 +93,10 @@ const Navigation = ({
     minValue,
     maxValue,
     sortValue,
+    pageNumber,
+    resultsForEachPage,
+    newOfferSubmited,
+    setNewOfferSubmited,
   ]);
 
   // Preventing scrolling when a modal is open
@@ -140,6 +152,9 @@ const Navigation = ({
                 >
                   Deconnexion
                 </button>
+                <Link to="/publish">
+                  <button className="sell-now">Vends maintenant</button>
+                </Link>
               </div>
             ) : (
               <div>
@@ -150,9 +165,13 @@ const Navigation = ({
                 >
                   Se connecter
                 </button>
+                <Link to="/login">
+                  <button className="sell-now" onClick={() => {}}>
+                    Vends maintenant
+                  </button>
+                </Link>
               </div>
             )}
-            <button className="sell-now">Vends maintenant</button>
             {modalSignup && (
               <div className="background">
                 <SignupModal

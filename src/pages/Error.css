@@ -2,19 +2,21 @@
 .error-page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: rgb(66, 66, 66);
+  height: 80vh;
 }
 
 .error-page img {
-  width: 500px;
+  max-width: 30%;
   padding: 40px 0;
 }
 
 .error-page button {
   background-color: #09adb6;
+  border: 1px solid #09adb6;
   color: white;
-  border: none;
   padding: 10px 20px;
   border-radius: 5px;
   margin: 20px 0;
@@ -24,5 +26,4 @@
 .error-page button:hover {
   background-color: white;
   color: #09adb6;
-  border: 1px solid #09adb6;
 }

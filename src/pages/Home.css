@@ -91,7 +91,8 @@
 }
 
 .introPic .pop-up-home button,
-nav .button-nav .sell-now {
+nav .button-nav .sell-now,
+.add-an-item {
   background-color: #09adb6;
   border: 1px solid #09adb6;
   color: white;

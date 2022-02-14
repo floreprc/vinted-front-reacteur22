@@ -1,0 +1,81 @@
+.create-offer-page {
+  background-color: #f5f6f7;
+}
+
+.create-offer-page h2 {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.create-offer-page > div {
+  /* background-color: rgb(158, 158, 216); */
+  display: flex;
+  justify-content: center;
+}
+
+.create-offer-page form {
+  width: 95%;
+  min-width: 200px;
+}
+
+.create-offer-page form > div {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin: 10px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.create-offer-page form > div label {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.create-offer-page form > div label p,
+.create-offer-page form > div label input {
+  flex: 1;
+}
+
+.create-offer-page form > div label p {
+  color: #303030;
+  font-weight: bold;
+}
+
+.add-an-item {
+  width: 100px;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.picture-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+input[type="file"] {
+  opacity: 0;
+  width: 90%;
+  height: 100px;
+  margin: 30px auto;
+  z-index: 5;
+  /* padding: 30px 50px;  */
+  /* background-color: blue; */
+}
+
+.picture-button div {
+  position: absolute;
+  border: 2px solid #09adb6;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #09adb6;
+  z-index: 2;
+  /* align-self: center; */
+  /* left: 29rem; */
+  /* top: 42%;*/
+  padding: 10px 20px;
+}
