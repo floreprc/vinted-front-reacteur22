@@ -120,3 +120,29 @@ nav .button-nav .sell-now:hover {
     position: absolute;
   }
 }
+
+@media (max-width: 1200px) {
+  .item-box {
+    width: 150px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introPic {
+    flex-direction: column;
+  }
+  .introPic > div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .introPic .pop-up-home {
+    width: 90%;
+  }
+  .item-box {
+    width: 100px;
+    height: 200px;
+  }
+}

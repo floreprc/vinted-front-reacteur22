@@ -74,22 +74,4 @@ a {
   /* body {
     background-color: blanchedalmond;
   } */
-
-  .introPic {
-    flex-direction: column;
-  }
-  .introPic > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .introPic .pop-up-home {
-    flex: 0.7;
-  }
-
-  .item-box {
-    width: 100px;
-    height: 200px;
-  }
 }

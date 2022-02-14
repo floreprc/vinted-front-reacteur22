@@ -266,3 +266,22 @@ nav div p {
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .searched-bar {
+    flex: 20;
+  }
+  .searching-inputs .filter-sort {
+    width: auto;
+    min-width: auto;
+    padding-right: 5px;
+  }
+
+  .filter p > p {
+    display: none;
+  }
+
+  .sell-now {
+    display: none;
+  }
+}
