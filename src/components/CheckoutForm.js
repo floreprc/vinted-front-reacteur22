@@ -40,7 +40,9 @@ const CheckoutForm = ({ userID, totalBasket, setCompleted, completed }) => {
   ) : (
     <form onSubmit={handleSubmit}>
       <CardElement />
-      <button type="submit">Valider</button>
+      <button type="submit" className="validate">
+        Valider
+      </button>
     </form>
   );
 };

@@ -32,7 +32,8 @@ nav .button-nav div {
 }
 
 nav .button-nav button,
-.back-home {
+.back-home,
+.payment-box .validate {
   background-color: white;
   color: #09adb6;
   border-radius: 5px;
@@ -42,7 +43,8 @@ nav .button-nav button,
   width: auto;
 }
 
-nav .button-nav button:hover {
+nav .button-nav button:hover,
+.payment-box .validate:hover {
   background-color: #09adb6;
   color: white;
 }

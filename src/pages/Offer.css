@@ -104,4 +104,8 @@
   .item-description {
     width: 90%;
   }
+  .item-description {
+    height: auto;
+    width: auto;
+  }
 }
