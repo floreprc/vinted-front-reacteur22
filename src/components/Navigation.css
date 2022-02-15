@@ -323,6 +323,7 @@ nav div p {
     padding-top: 15px;
     border-top: 1px solid rgb(199, 199, 199);
     padding: 10px 35px;
+    background-color: white;
   }
 }
 @media (max-width: 768px) {
