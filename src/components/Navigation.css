@@ -313,9 +313,14 @@ nav div p {
     left: auto;
   }
 
-  .big-screen {
+  /* .big-screen {
     background-color: blue;
     display: none;
+  } */
+
+  .big-screen-div {
+    margin-bottom: 0;
+    flex: 100;
   }
   .small-screen {
     display: flex;
