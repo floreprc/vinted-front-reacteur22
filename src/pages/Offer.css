@@ -1,12 +1,12 @@
 /* Offer */
 
 .background-item {
-  background-color: #ebedee;
+  background-color: #f5f6f7;
   display: flex;
   padding: 50px;
   justify-content: center;
   gap: 40px;
-  height: 100vh;
+  height: 90vh;
 }
 
 /* image */
@@ -66,6 +66,10 @@
 .item-description button:hover {
   background-color: white;
   color: #09adb6;
+}
+
+.item-description .buy-button {
+  width: 100%;
 }
 
 .item-description .home-return {

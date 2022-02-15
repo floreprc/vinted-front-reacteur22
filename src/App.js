@@ -5,6 +5,7 @@ import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import CreateOffer from "./pages/CreateOffer";
+import Payment from "./pages/Payment";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import { useState } from "react";
@@ -88,7 +89,10 @@ function App() {
             ></Home>
           }
         />
-        <Route path="/offer/:id" element={<Offer />}></Route>
+        <Route
+          path="/offer/:id"
+          element={<Offer token={token} setModalLogin={setModalLogin} />}
+        ></Route>
         <Route path="/signup" element={<Signup setUser={setUser} />}></Route>
         <Route path="/login" element={<Login setUser={setUser} />}></Route>
         <Route
@@ -101,6 +105,7 @@ function App() {
             />
           }
         ></Route>
+        <Route path="/payment" element={<Payment token={token} />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
       <Footer />

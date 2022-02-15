@@ -9,6 +9,7 @@ nav > div {
 
 .big-screen-div {
   padding: 10px 30px;
+  width: 100%;
 }
 nav img {
   height: 35px;
@@ -26,13 +27,18 @@ nav .search-and-buttons {
   width: 100%;
 }
 
-nav .button-nav button {
+nav .button-nav div {
+  gap: 10px;
+}
+
+nav .button-nav button,
+.back-home {
   background-color: white;
   color: #09adb6;
   border-radius: 5px;
   border: 1px solid #09adb6;
   padding: 5px 10px;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   width: auto;
 }
 
@@ -146,7 +152,7 @@ nav input::placeholder {
 }
 
 nav div p {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 /* Filters */
@@ -278,6 +284,7 @@ nav div p {
   nav .search-and-buttons .button-nav {
     justify-content: flex-end;
     width: 100%;
+    margin-right: 5px;
   }
 
   nav .search-and-buttons .searching-inputs {
@@ -295,9 +302,9 @@ nav div p {
   .searching-inputs .delete-search-icon {
     left: 50%;
   }
-  .searching-inputs .filter-sort {
+  /* .searching-inputs .filter-sort {
     min-width: 165px;
-  }
+  } */
   .chooseAPrice,
   .sortItems {
     right: 0;

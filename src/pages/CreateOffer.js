@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Loading from "../components/Loading";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import imgPublish from "../assets/img/published.svg";
 import "./CreateOffer.css";
 import axios from "axios";
@@ -56,7 +56,7 @@ const CreateOffer = ({ token, setNewOfferSubmited, newOfferSubmited }) => {
     }
   };
 
-  return (
+  return token ? (
     <div className="create-offer-page">
       {newOfferSubmited ? (
         <div className="offer-published wrapped">
@@ -193,6 +193,8 @@ const CreateOffer = ({ token, setNewOfferSubmited, newOfferSubmited }) => {
         </>
       )}
     </div>
+  ) : (
+    <Navigate to="/" />
   );
 };
 

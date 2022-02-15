@@ -110,8 +110,8 @@ const Navigation = ({
   }, [modalLogin, modalSignup]);
 
   return (
-    <nav className="wrapped nav-lines">
-      <div className="big-screen-div">
+    <nav className="nav-lines wrapped">
+      <div className="big-screen-div wrapped">
         <Link to={"/"}>
           <img
             src={logo}
@@ -168,9 +168,12 @@ const Navigation = ({
                 >
                   Se connecter
                 </button>
-                <Link to="/login">
-                  <button className="sell-now">Vends maintenant</button>
-                </Link>
+                <button
+                  className="sell-now"
+                  onClick={() => setModalLogin(true)}
+                >
+                  Vends maintenant
+                </button>
               </div>
             )}
             {/* Modals to sign up and login */}
@@ -196,7 +199,7 @@ const Navigation = ({
         </div>
       </div>
       {/* search bar for smaller screens */}
-      <div>
+      <div className="wrapped">
         <SearchBar
           searchedText={searchedText}
           setSearchedText={setSearchedText}

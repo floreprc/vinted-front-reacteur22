@@ -1,0 +1,54 @@
+.payment-background {
+  background-color: #f5f6f7;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-box {
+  background-color: white;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-box p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-box .payment-summary {
+  display: block;
+}
+
+.payment-box .payment-summary span {
+  font-weight: 700;
+}
+
+.payment-box button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.payment-box form {
+  width: 100%;
+}
+
+.purchase-sent {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  align-items: center;
+}
+.payment-box img {
+  width: 30%;
+  padding: 20px 0;
+}
+
+.purchase-sent p {
+  font-weight: 700;
+}
