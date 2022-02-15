@@ -163,6 +163,7 @@ nav .button-nav .sell-now:hover {
 @media (max-width: 768px) {
   .introPic {
     flex-direction: column;
+    z-index: 2;
   }
   .introPic > div {
     height: auto;

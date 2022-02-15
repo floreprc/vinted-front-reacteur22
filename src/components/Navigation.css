@@ -324,6 +324,7 @@ nav div p {
     border-top: 1px solid rgb(199, 199, 199);
     padding: 10px 35px;
     background-color: white;
+    margin-top: 0;
   }
 }
 @media (max-width: 768px) {
