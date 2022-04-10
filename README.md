@@ -1,6 +1,6 @@
-# VINTED | Frontend
+# VINTED | Frontend with React
 
-Academic work, as part of the certification from @LeReacteur - March 2022
+Academic work, as part of training from @LeReacteur - March 2022
 
 ## Description
 
