@@ -1,22 +1,21 @@
-# Vinted Website
+# VINTED | Frontend
 
-Made by Flore Perche ( Le Reacter Jan. 2022)
+Academic work, as part of the certification from @LeReacteur - March 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Project Structure
+This is the front part of a Vinted-alike website, with :
 
-Three common components to all pages :
+- Front page with search bar and filters
+- Item detail page for each item
+- Sign up and login modal
+- Item creation form when the user connected (managed with cookies)
 
-- Navigation (with components : Signup Modal, Login Modal, Search Bar, Price Button and Sort Button)
-- Footer
-- Loading
+## Technologies
 
-Four active pages :
-
-- Home : with a caroussel of offers
-- Offer : to see in details an offer
-- CreateOffer : to create a new offer (whant authentificated)
-- Error : for all other URL
-
-Two unacted pages (replaced by modals) : Signup and Login pages
+<p>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="20" height="20"/>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="20" height="20"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="20" height="20"/>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="20" height="20"/>
+</p>
